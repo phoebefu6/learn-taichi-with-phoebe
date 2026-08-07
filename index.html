@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn taichi with phoebe - everything worth knowing before your first class</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(74,82,78,.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff, #F4F6F3); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .note-band { margin-top: 1.4rem; background: var(--amber-50); border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: 12px; padding: .9rem 1.1rem; font-size: .88rem; color: var(--ink); }
+  .note-band b { color: var(--amber-ink); }
+
+  .project-band { margin-top: 1.4rem; background: var(--indigo-50); border: 1px solid var(--hairline); border-left: 4px solid var(--indigo); border-radius: 12px; padding: .9rem 1.1rem; font-size: .88rem; color: var(--ink); }
+  .project-band b { color: var(--indigo-deep); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Tai Chi with Phoebe</div>
+    <h1>Everything worth knowing <span class="accent">before your first</span> tai chi class</h1>
+    <p class="sub">Six sessions on what text can honestly teach: what the practice actually is, where it really came from, the principles you can understand before you can perform them, what the research genuinely shows, and how to find a teacher when no certification means anything. Plus a rooting lab that computes the geometry live.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="13">13</b><span>postures decoded</span></div>
+      <div class="stat"><b data-count="4">4</b><span>stances in the lab</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-what-it-is.html" style="--diff:#34D399">
+        <span class="cicon">☯️</span>
+        <span class="cnum">Session 1 · easiest</span>
+        <h3>What tai chi actually is - and where it really came from</h3>
+        <p>A martial art, a health practice and a moving meditation, all three at once. Plus the history without the fog machine, including one writer who asserted the famous origin story in 1867 and took it back in 1881.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span><span class="pill light">Orientation</span></span>
+      </a>
+      <a class="course-card" href="courses/02-rooting.html" style="--diff:#34D399">
+        <span class="cicon">🦶</span>
+        <span class="cnum">Session 2 · easiest</span>
+        <h3>Rooting and weight shift, with the live lab</h3>
+        <p>Two facts govern all standing balance, and everything tai chi does with the legs follows. Drag a slider and watch 双重 double-weighting turn from a scolding into a measurable trade-off.</p>
+        <span class="meta"><span class="pill light">The lab lives here</span></span>
+      </a>
+      <a class="course-card" href="courses/03-song.html" style="--diff:#FBBF24">
+        <span class="cicon">🌊</span>
+        <span class="cnum">Session 3 · building</span>
+        <h3>松 sōng and the body method</h3>
+        <p>The principle every teacher names first and beginners understand last, because "relax" imports collapse. Plus Yang Chengfu's Ten Essentials in their verified order.</p>
+        <span class="meta"><span class="pill light">Body principles</span></span>
+      </a>
+      <a class="course-card" href="courses/04-thirteen-postures.html" style="--diff:#FBBF24">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Session 4 · building</span>
+        <h3>The thirteen postures and push hands</h3>
+        <p>Eight ways of meeting force, five ways of moving, and the honest status of the trigram overlays. Plus what partner work is actually for - listening, not sparring.</p>
+        <span class="meta"><span class="pill light">八门五步</span></span>
+      </a>
+      <a class="course-card" href="courses/05-does-it-work.html" style="--diff:#FBBF24">
+        <span class="cicon">📊</span>
+        <span class="cnum">Session 5 · building</span>
+        <h3>Does it actually work?</h3>
+        <p>The pleasant surprise: real guideline endorsements and three head-to-head wins. The honest catch: most of the advantage disappears when the comparison is other exercise rather than nothing.</p>
+        <span class="meta"><span class="pill light">Real numbers</span></span>
+      </a>
+      <a class="course-card" href="courses/06-finding-a-teacher.html" style="--diff:#FB923C">
+        <span class="cicon">🚪</span>
+        <span class="cnum">Session 6 · deepening</span>
+        <h3>Finding a teacher and starting well</h3>
+        <p>The five families, why no certification means anything, the questions that actually vet a teacher, and what the first twelve weeks really look like.</p>
+        <span class="meta"><span class="pill light">Walk in prepared</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easiest - start here</span>
+      <span><i style="background:#FBBF24"></i>building - the principles</span>
+      <span><i style="background:#FB923C"></i>deepening - going in</span>
+    </div>
+
+    <div class="note-band">
+      <b>This course prepares you for a class. It is not a class.</b> A form is transmitted body to body, by a teacher who can see you. No web page can do that, and this one will not pretend to. What text can carry is everything else - and there turns out to be a great deal of it.
+    </div>
+
+    <div class="project-band">
+      <b>🧩 The running project: your practice-readiness kit.</b> Each session adds one piece - why you are interested plus a safe balance baseline, your rooting self-tests, a posture checklist, a style shortlist, an evidence-honest expectation - and Session 6 assembles them into the three questions you will ask a prospective teacher and the class you actually choose.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your focus 🧭</h2>
+      <p class="plede">Everyone starts at Session 1. After that, follow what you need - or take all six in order.</p>
+      <div class="path"><b>🦶 Just teach me the principles</b>
+        <a class="pstep" href="courses/02-rooting.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-song.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-thirteen-postures.html">4</a>
+      </div>
+      <div class="path"><b>🔬 Convince the skeptic in me</b>
+        <a class="pstep" href="courses/01-what-it-is.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-does-it-work.html">5</a>
+      </div>
+      <div class="path"><b>🚪 I want to start next week</b>
+        <a class="pstep" href="courses/02-rooting.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-does-it-work.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-finding-a-teacher.html">6</a>
+      </div>
+      <div class="path"><b>📿 The full preparation</b>
+        <a class="pstep" href="courses/01-what-it-is.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-rooting.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-song.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-thirteen-postures.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-does-it-work.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-finding-a-teacher.html">6</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole course at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-taichi-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · preparation for a class, not medical advice</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "太极拳",
+  centerColor: "#2E3230",
+  sessions: [
+    { label: "What it\nis", href: "courses/01-what-it-is.html", color: "#34D399",
+      concepts: [
+        { label: "Three identities", href: "courses/01-what-it-is.html" },
+        { label: "内家 in 1669", href: "courses/01-what-it-is.html" },
+        { label: "1867 → 1881", href: "courses/01-what-it-is.html" } ] },
+    { label: "Rooting\n& shift", href: "courses/02-rooting.html", color: "#34D399",
+      concepts: [
+        { label: "Base of support", href: "courses/02-rooting.html" },
+        { label: "双重 fault", href: "courses/02-rooting.html" },
+        { label: "The rooting lab", href: "courses/02-rooting.html" } ] },
+    { label: "松 sōng", href: "courses/03-song.html", color: "#FBBF24",
+      concepts: [
+        { label: "Not collapse", href: "courses/03-song.html" },
+        { label: "Ten Essentials", href: "courses/03-song.html" },
+        { label: "用意不用力", href: "courses/03-song.html" } ] },
+    { label: "Thirteen\npostures", href: "courses/04-thirteen-postures.html", color: "#FBBF24",
+      concepts: [
+        { label: "八门 eight gates", href: "courses/04-thirteen-postures.html" },
+        { label: "五步 five steps", href: "courses/04-thirteen-postures.html" },
+        { label: "推手 push hands", href: "courses/04-thirteen-postures.html" } ] },
+    { label: "Does it\nwork?", href: "courses/05-does-it-work.html", color: "#FBBF24",
+      concepts: [
+        { label: "Falls prevention", href: "courses/05-does-it-work.html" },
+        { label: "The head-to-heads", href: "courses/05-does-it-work.html" },
+        { label: "7% high certainty", href: "courses/05-does-it-work.html" } ] },
+    { label: "Finding a\nteacher", href: "courses/06-finding-a-teacher.html", color: "#FB923C",
+      concepts: [
+        { label: "The five families", href: "courses/06-finding-a-teacher.html" },
+        { label: "No standard exists", href: "courses/06-finding-a-teacher.html" },
+        { label: "Your first weeks", href: "courses/06-finding-a-teacher.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

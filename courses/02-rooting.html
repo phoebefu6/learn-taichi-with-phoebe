@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 · Rooting and weight shift - learn taichi with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-taichi-with-phoebe</a> / Session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Tai Chi with Phoebe · Session 2 of 6</div>
+    <h1>Rooting and weight shift: <span class="accent">the whole art</span> in one idea</h1>
+    <p class="sub">If you take one thing from this course into a class, take this. Almost everything tai chi does with the legs is a consequence of two facts about balance and one classical instruction about not being stuck. Today you get all three, and a lab where you can watch the geometry work.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Easiest</span>
+      <span class="chip audience">The lab lives here</span>
+      <span class="chip audience">Real geometry</span>
+      <span class="chip time">45 min + self-study depth</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · The two facts</span>
+      <span class="a3" style="flex:5">18-40 · The lab</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this session exists</h2>
+    </div>
+    <p class="lede">Beginners watch a tai chi class and see arms. Teachers watch the same class and see feet. The gap between those two views is what this session closes. Rooting is not a mystical property you acquire after years - it is a describable relationship between where your weight is and where your feet are, and you can understand it completely in forty-five minutes even though you will spend years refining it in your body.</p>
+    <div class="legend">
+      <span class="pill solid">Live - covered in session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">✦ Lab prompt</span>
+      <span class="pill inkpill">🧩 Your readiness kit, step 2</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The two facts that govern all standing balance, the classical fault called 双重 and why it is a fault, the difference between what the classics actually say and what modern schools teach, hands-on time with the rooting lab, and your own recorded rooting self-tests.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE TWO FACTS ============ -->
+  <section class="section" id="two-facts">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the mechanics of standing</span>
+      <h2>Two facts, and everything follows <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Standing balance runs on two quantities. Your <strong>base of support</strong> is the area on the ground enclosed by whatever is touching it - for two feet, roughly the region spanning both footprints and the space between. Your <strong>centre of mass</strong> is the single point where your body's weight effectively acts, sitting somewhere around your lower belly when you stand.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two facts of balance: centre of mass inside the base of support, and lower centre of mass giving more recoverable lean">
+        <style>
+          .r2T { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .r2X { font: 400 12.5px Inter, sans-serif; fill: #6B7680; }
+          .r2I { font: 700 14px Inter, sans-serif; fill: #26292A; }
+          .r2N { font: 600 14px Inter, sans-serif; fill: #0C3227; }
+        </style>
+        <rect x="20" y="26" width="404" height="140" rx="14" fill="#2E3230"/>
+        <text class="r2T" x="44" y="56">Fact 1 · stay inside the base</text>
+        <text class="r2X" x="44" y="82" fill="#E9EDE9">While your centre of mass sits over the</text>
+        <text class="r2X" x="44" y="102" fill="#E9EDE9">area your feet enclose, you are standing.</text>
+        <text class="r2X" x="44" y="122" fill="#E9EDE9">The moment it leaves, you are falling -</text>
+        <text class="r2X" x="44" y="142" fill="#E9EDE9">or stepping, which is a controlled fall.</text>
+        <rect x="444" y="26" width="416" height="140" rx="14" fill="#4A524E"/>
+        <text class="r2T" x="468" y="56">Fact 2 · lower is steadier</text>
+        <text class="r2X" x="468" y="82" fill="#E9EDE9">The lean you can recover from depends on</text>
+        <text class="r2X" x="468" y="102" fill="#E9EDE9">how far the edge is and how high your</text>
+        <text class="r2X" x="468" y="122" fill="#E9EDE9">weight sits. Same feet, lower centre,</text>
+        <text class="r2X" x="468" y="142" fill="#E9EDE9">more room to be wrong. That is 沉 sinking.</text>
+        <rect x="20" y="196" width="840" height="34" rx="10" fill="#EFF2EF" stroke="#C9CFC9"/>
+        <text class="r2I" x="44" y="218">Nothing in these two facts is specific to tai chi. Everything tai chi does with the legs obeys them.</text>
+        <rect x="20" y="242" width="14" height="14" rx="3" fill="#2E8B6F"/>
+        <text class="r2N" x="44" y="254">Rooting is a skill, not a substance - the skill of managing these two quantities well.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the two facts that govern all standing balance</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What "rooting" actually names<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You will hear rooting described as sinking energy into the ground, or growing roots like a tree. Those are the tradition's images and they are good teaching images - but underneath them sits something plainly describable: <strong>keeping your centre of mass well inside your base of support, keeping it low, and knowing at every moment which foot is carrying you.</strong></p>
+        <p>The classics say it in a line about the chain of movement, which circulates through several of the canonical texts:</p>
+        <div class="prompt-box good"><span class="label">✦ From the classics</span>其根在脚，发于腿，主宰于腰，形于手指。
+
+Qí gēn zài jiǎo, fā yú tuǐ, zhǔzǎi yú yāo, xíng yú shǒuzhǐ.
+
+"The root is in the feet, issued through the legs, governed by the waist, expressed in the fingers."</div>
+        <p>A note on honesty: that line moves between texts - it appears within Wu Yuxiang's writings and also inside editions attributed to Zhang Sanfeng - so attribute it to <em>the classics</em> generally rather than to one named author. Session 4 explains why that kind of hedging is necessary throughout this literature.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Why teachers seem obsessed with your feet.</strong> If the root is in the feet and everything else is downstream, then a fault in the legs propagates upward and cannot be fixed at the arms. This is why a good teacher will ignore your beautiful hand shape and tell you your back knee is collapsing. They are not being pedantic; they are working at the only place the problem can actually be solved.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>双重 shuāngzhòng - the classical fault<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Wang Zongyue's 太极拳论, the most quoted text in the tradition, gives the whole doctrine of weighting in eight characters:</p>
+        <div class="prompt-box good"><span class="label">✦ 太极拳论 · the eight characters</span>偏沉则随，双重则滞。
+
+Piān chén zé suí, shuāng zhòng zé zhì.
+
+"Sink to one side and you can follow; be doubly weighted and you stagnate."</div>
+        <p>That is the entire classical statement. <strong>双重 shuāngzhòng, "double weighting," is named as a fault</strong> - not because even weight is unstable, but because it is <em>stuck</em>. If both legs are loaded, neither can move without first unloading, and that extra beat is the one your partner uses.</p>
+        <p>Yang Chengfu makes the same point in his fourth essential, 分虚实 <em>fēn xū shí</em>, "distinguish empty and full," which he calls the number one rule: shift onto one leg, that leg is 实 <em>shí</em> solid, the other is 虚 <em>xū</em> empty, and only then are turns "light, nimble and almost without effort."</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>沉 chén, sinking, and what it buys<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Sinking runs all through the Ten Essentials you meet properly in Session 3. Essential 2, 含胸拔背, links containing the chest to 气沉丹田 - sinking the breath to the lower belly. Essential 5 is 沉肩坠肘, sinking the shoulders and dropping the elbows.</p>
+        <p>Mechanically, sinking lowers your centre of mass without changing your footprint, and Fact 2 says that buys you more recoverable lean from exactly the same feet. You can watch that number move in the lab in a moment. It is one of the places where a traditional instruction and ordinary physics say precisely the same thing, and it is worth noticing that they do - not every instruction in this tradition has that property.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE LAB ============ -->
+  <section class="section" id="lab">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the build-along · everyone experiments</span>
+      <h2>The rooting lab <span class="tag demo">✦ 20 min hands-on</span></h2>
+    </div>
+    <p class="lede">This is a real balance model seen from above. The dashed outline is a convex hull computed from the actual foot polygons; the dot is tested against it with real geometry; and the recoverable-lean figure is <em>atan(margin ÷ height of your centre of mass)</em>, which is ordinary physics rather than a tai chi claim. Drag the slider and watch what the classics are describing.</p>
+
+    <div class="tcbox"></div>
+
+    <div class="steps">
+      <div class="step"><p><strong>Start in 无极 wuji, the parallel stance, weight even.</strong> Look at the margin figure - about 12.5 cm, the best number you will see today. Now look at the verdict. The lab flags <strong>双重</strong>, double-weighted, because both feet are loaded. Maximum stability, zero mobility. That is the classical fault, measured.</p></div>
+      <div class="step"><p><strong>Slide the weight across.</strong> Watch two numbers move in opposite directions: the margin shrinks as your centre travels toward one foot, and at around 90/10 the lighter foot goes white - it is free to step. <strong>You are buying mobility with stability.</strong> That trade is what 分虚实 is asking you to make, and no amount of practice abolishes it.</p></div>
+      <div class="step"><p><strong>Switch to 弓步, the bow stance.</strong> Notice the base is now long and narrow rather than square. Front-to-back you have far more room than in the parallel stance; side-to-side, less. This is why the bow stance is the workhorse of the form, which travels forward and back far more than it travels sideways.</p></div>
+      <div class="step"><p><strong>Push the slider to either extreme.</strong> The dot turns red and leaves the base entirely: <strong>off your root</strong>. Notice how little travel it took. In a real body this is the moment you either take an unplanned step or fall, and everything tai chi teaches about not over-committing is about staying away from this edge.</p></div>
+      <div class="step"><p><strong>Turn on 沉 sink.</strong> The margin does not change - same feet, same footprint - but the recoverable lean rises from 7.1° to 8.1° in the parallel stance. That is the entire mechanical payoff of sinking, and it is real.</p></div>
+      <div class="step"><p><strong>Try 虚步, the empty stance, and load the front foot.</strong> Watch the margin collapse. That front foot is a feeler, not a pillar; putting weight on a toe-sized contact patch is exactly the beginner error the stance is designed to train out.</p></div>
+      <div class="step"><p><strong>Finish on 独立, single leg.</strong> The smallest base in the course, roughly 4.5 cm of margin, about 2.6° of recoverable lean. Compare that to your one-leg baseline time from Session 1 and you have a sense of what the golden-rooster postures are actually asking of you.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>An honesty note about the numbers on this page</strong>
+      <strong>The percentages are modern pedagogy, not classical doctrine.</strong> No classical text specifies 70/30, 60/40 or 100/0 - Wang Zongyue's treatise says only 偏沉则随，双重则滞, and even the explicit contrast between 双重 and "single-weighting" 单重 belongs to a later manuscript layer, the Yang family 《太极法说》 of around 1875. The ratios you will hear in class are teaching conventions that vary by school and even within a style: Yang lineages commonly say roughly 70/30 in the bow stance, Wu lineages often work much closer to 100/0. The lab uses percentages because they make the trade-off visible on a screen, not because a 17th-century boxer was counting them.
+    </div>
+  </section>
+
+  <!-- ============ PART 3: WHAT THIS EXPLAINS ============ -->
+  <section class="section" id="explains">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers what the model buys you</span>
+      <h2>Five things the lab just explained <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The value of understanding the geometry is that a dozen apparently arbitrary class instructions turn out to be the same instruction.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the form moves so slowly<span class="mini">1.5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Because the interesting part is the transition. Any competent adult can stand in a bow stance; the skill is in travelling between stances without the centre of mass straying near an edge. Slow movement is not a stylistic choice or a relaxation technique - it is the speed at which you can still notice and correct where your weight is. Speed hides errors, and the form is built to expose them.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why teachers say "empty the foot before you move it"<span class="mini">1.5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Because a loaded foot cannot move without a lurch. In the lab, the lighter foot only turns white and becomes free below about 10% load. If you try to step with 40% still on that foot, your body must first dump that weight somewhere - and that dumping motion is the visible wobble every beginner produces and every teacher spots instantly. Empty first, then move. The order is the whole instruction.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the stances are wide, and why they are not wider<span class="mini">1 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A wider stance is a bigger base, which is more margin. But a bigger base also means further to travel to unload a foot, and a very wide stance strands you in double weighting because neither foot can empty easily. The stances of the form sit at a compromise: wide enough for real margin, narrow enough that a weight shift can still free a foot in one movement. Try the extremes in the lab and the compromise becomes obvious.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why this generalises past tai chi<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Everything above is true of walking up stairs, carrying shopping, and getting out of a chair. That is not a coincidence, and it is a large part of why tai chi shows up in falls-prevention research at all - a practice that spends an hour a week rehearsing controlled weight transfer near the edge of the base of support is, structurally, a falls-prevention intervention whether or not anyone designed it as one.</p>
+        <p>Session 5 gives that idea its numbers, including the honest finding that other kinds of balance exercise do about as well.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ APPLY ============ -->
+  <section class="section" id="apply-1">
+    <div class="section-kicker">
+      <span class="klabel">Reflect &amp; apply · 🧩 kit step 2</span>
+      <h2>Your rooting self-tests <span class="tag demo">✦ 8 min · builds your kit</span></h2>
+    </div>
+    <p class="lede">Three small physical checks, all done with support within arm's reach. These are observations, not exercises - you are gathering a description of where you actually are, so that Session 6's teacher conversation is grounded in something real.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>The shift test.</strong> Stand feet shoulder-width, weight even. Slowly move your weight fully onto your left foot until your right foot is light enough to lift a centimetre off the floor. Note whether you had to lean, whether your torso stayed upright, and how far your hip travelled sideways. Repeat right. Most people discover they lean rather than shift.</p></div>
+      <div class="step"><p><strong>The empty-foot test.</strong> From that same position, with the right foot light, hold for five seconds and see whether the foot can genuinely stay unweighted or keeps drifting back down for support. A foot that keeps touching down is telling you the shift is not complete.</p></div>
+      <div class="step"><p><strong>The sinking test.</strong> Stand tall, then soften the knees a few centimetres without tipping forward. Notice what your thighs report, and whether your breathing changed. Tai chi is done in this softened range continuously, which is why an hour of it is more work than it looks.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Nothing here should hurt</strong>
+      Support within reach for all three. Knees soften over the feet, not collapsing inward. If any of it produces knee pain, stop - and note it, because "which movements bother my knees" is one of the most useful things you can tell a prospective teacher in Session 6.
+    </div>
+
+    <div class="prompt-box good"><span class="label">✦ Kit step 2 template</span>ROOTING SELF-TESTS · [date]
+
+SHIFT TEST: left ___ (did I lean or shift? torso upright?) · right ___
+EMPTY-FOOT TEST: can hold the empty foot up for 5 sec? left ___ right ___
+SINKING TEST: comfortable softened depth ___ · anything that complained ___
+
+WHAT I NOW UNDERSTAND: rooting = centre of mass inside the base, kept low, one foot clearly
+empty. 双重 double-weighting is stable but stuck. The percentages are modern teaching
+conventions, not classical doctrine.</div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before Session 3 <span class="tag exercise">◐ 5 min a day</span></h2>
+    </div>
+    <ul>
+      <li><strong>Shift practice, one minute a day.</strong> Feet shoulder-width, support nearby, slowly move your weight left and right, aiming to keep the torso upright rather than leaning. This is genuinely the highest-value minute available to you before a first class.</li>
+      <li><strong>Notice double weighting in ordinary life.</strong> Standing in a queue, at a counter - are both feet loaded? Can you feel that you would need an extra beat to move? That noticing is the skill.</li>
+      <li><strong>Return to the lab once</strong> and try to predict the margin before you read it. Getting a feel for how quickly it collapses is worth more than memorising any number.</li>
+      <li>Optional: watch the 24-form again, and this time watch only the transitions between postures rather than the postures themselves. It is a different video the second time.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES / COVERAGE ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">What this covers</span>
+      <h2>Sources this session stands on</h2>
+    </div>
+    <p class="lede">The mechanics are ordinary physics and the lab computes them live. The classical claims are quoted with their attribution problems stated.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">太极拳论 · 偏沉则随，双重则滞</span><span class="note">The complete classical statement on weighting, quoted in full; 双重 named as a fault</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Yang Chengfu, Essential 4 · 分虚实</span><span class="note">"Distinguish empty and full," his number one rule, stated without numbers</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The rooting line 其根在脚</span><span class="note">Quoted, with its cross-text attribution problem stated rather than hidden</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The lab's geometry</span><span class="note">Convex-hull base of support, point-in-polygon test, tipping angle = atan(margin / height). Computed, not scripted</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Weight percentages (70/30, 100/0)</span><span class="note">Flagged as modern pedagogy absent from the classics; 单重 belongs to the c.1875 太极法说 layer</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Falls-prevention evidence</span><span class="note">Gestured at here; the numbers and the honest comparison arrive in Session 5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · 双重 shuāngzhòng, double weighting, is a fault because...</p>
+      <button class="qopt" type="button">A · even weight makes you unstable</button>
+      <button class="qopt" type="button">B · both feet loaded means neither can move without an extra beat</button>
+      <button class="qopt" type="button">C · it lowers your centre of mass too far</button>
+      <p class="qwhy">Even weight is actually the most stable position - it has the biggest margin. The problem is mobility: 偏沉则随，双重则滞, "sink to one side and you can follow; be doubly weighted and you stagnate."</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Sinking 沉 improves your balance because...</p>
+      <button class="qopt" type="button">A · it makes the base of support larger</button>
+      <button class="qopt" type="button">B · it shifts weight onto the back foot</button>
+      <button class="qopt" type="button">C · a lower centre of mass means more recoverable lean from the same footprint</button>
+      <p class="qwhy">The footprint does not change - the margin figure stays identical in the lab. What changes is the angle you can lean and still come back, because the recoverable lean is atan(margin / height).</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The 70/30 weight ratio you will hear in class is...</p>
+      <button class="qopt" type="button">A · modern teaching convention - no classical text gives percentages</button>
+      <button class="qopt" type="button">B · specified in Wang Zongyue's treatise</button>
+      <button class="qopt" type="button">C · the same in every style</button>
+      <p class="qwhy">The classics give only 偏沉则随，双重则滞. Ratios vary by school - Yang lineages often teach roughly 70/30, Wu lineages often much closer to 100/0. Useful conventions, not doctrine.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Fact 1</b><span>Centre of mass inside the base of support = standing. Outside = falling, or stepping.</span></div>
+      <div class="cheat-item"><b>Fact 2</b><span>Recoverable lean = atan(margin / height). Lower centre, same feet, more room to be wrong.</span></div>
+      <div class="cheat-item"><b>Rooting is</b><span>Weight inside the base, kept low, with one foot clearly empty. A skill, not a substance.</span></div>
+      <div class="cheat-item"><b>The eight characters</b><span>偏沉则随，双重则滞 - sink to one side and you can follow; be doubly weighted and you stagnate.</span></div>
+      <div class="cheat-item"><b>双重 is stuck, not unstable</b><span>Even weight has the best margin and the worst mobility. That trade never goes away.</span></div>
+      <div class="cheat-item"><b>分虚实</b><span>Yang Chengfu's number one rule: distinguish empty and full, then turns become light.</span></div>
+      <div class="cheat-item"><b>The percentages</b><span>70/30 and 100/0 are modern conventions. The classics give no numbers. 单重 is a c.1875 term.</span></div>
+      <div class="cheat-item"><b>🧩 Kit step 2</b><span>Shift test, empty-foot test, sinking test - all recorded, support within reach.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 2 of 6 · learn-taichi-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="01-what-it-is.html">← Prev: What tai chi actually is</a> &nbsp;·&nbsp; <a href="03-song.html">Next: 松 song and the body method →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+<script src="../assets/taichi-live.js?v=1"></script>
+</body>
+</html>

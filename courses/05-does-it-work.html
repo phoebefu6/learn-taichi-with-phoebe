@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 5 · Does it actually work? - learn taichi with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-taichi-with-phoebe</a> / Session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Tai Chi with Phoebe · Session 5 of 6</div>
+    <h1>Does it actually work? <span class="accent">Both halves</span> of the answer</h1>
+    <p class="sub">This is the pleasant surprise of the course. Tai chi's evidence base is genuinely better than most traditional practices, with real guideline endorsements and three trials where it beat a real active comparator. And here is the catch, given equal billing: most of that advantage disappears when the comparison is other exercise rather than nothing.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Building</span>
+      <span class="chip audience">Real numbers</span>
+      <span class="chip audience">The honest comparison</span>
+      <span class="chip time">45 min + self-study depth</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Falls and guidelines</span>
+      <span class="a3" style="flex:4">20-40 · Head-to-heads and limits</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The session where the rail cuts the other way</h2>
+    </div>
+    <p class="lede">Four sessions of this course have been quiet corrections: the origin story is a document with a history, the weight percentages are modern pedagogy, the trigram correspondences are unstable overlays. It would be reasonable to expect the evidence section to be more of the same. It is not. <strong>Tai chi's "research says" column is often the strong card</strong> - a Cochrane review, a strong recommendation in a major clinical guideline, three randomised trials against real active comparators, and a safety profile with nothing worrying in it. Say that plainly, because honesty that only ever subtracts is not honesty.</p>
+    <p>And then say the other half just as plainly. Effect sizes shrink markedly once the comparator is a proper dose of other exercise, and 93% of the effect estimates in the entire literature sit below high certainty. Both halves are today, and neither one is the footnote.</p>
+    <div class="legend">
+      <span class="pill solid">Live - covered in session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">✦ Reflect prompt</span>
+      <span class="pill inkpill">🧩 Your readiness kit, step 5</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The Cochrane falls numbers with both comparators side by side, exactly which bodies recommend tai chi by name and which pointedly do not, the three trials where it beat a real active control, the certainty profile of the whole field, a clean position on the qi question, the safety data, and an evidence-honest revision of the expectation you wrote in Session 1.
+    </div>
+    <div class="callout tip">
+      <strong>The standing rail</strong>
+      <strong>This course prepares you for a class. It is not a class.</strong> Nothing below is medical advice, and no number here applies to you specifically. Claims are labeled <strong>the text says</strong> (a named classical source), <strong>tradition holds</strong> (later convention), or <strong>research says</strong> (a named study with exact numbers and a certainty rating). Today is almost entirely the third label, which is why every figure arrives with its confidence interval, its sample size and its GRADE rating attached rather than rounded into a headline.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: FALLS ============ -->
+  <section class="section" id="falls">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the strongest evidence tai chi has</span>
+      <h2>Falls prevention, with the comparator kept in frame <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede"><strong>Research says.</strong> Sherrington C, Fairhall NJ, Wallbank GK, et al, "Exercise for preventing falls in older people living in the community," <em>Cochrane Database of Systematic Reviews</em> 2019;1(1):CD012424. One hundred and eight randomised trials, 23,407 community-dwelling participants, 25 countries. This is the largest and most careful synthesis in the area, and tai chi has its own analysis inside it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cochrane 2019 forest plot comparing tai chi with general balance and functional exercise on rate of falls and number of people who fall">
+        <style>
+          .ev5aT { font: 700 13px Inter, sans-serif; fill: #26292A; }
+          .ev5aL { font: 700 12.5px Inter, sans-serif; fill: #26292A; }
+          .ev5aS { font: 400 11.5px Inter, sans-serif; fill: #6B7680; }
+          .ev5aA { font: 400 11px Inter, sans-serif; fill: #6B7680; }
+          .ev5aC { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+          .ev5aR { font: 700 11px Inter, sans-serif; fill: #991B1B; }
+          .ev5aN { font: 600 14px Inter, sans-serif; fill: #0C3227; }
+        </style>
+        <line x1="640" y1="44" x2="640" y2="300" stroke="#C9CFC9" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+        <rect x="20" y="17" width="4" height="14" rx="2" fill="#2E8B6F"/>
+        <text class="ev5aT" x="34" y="29">Rate of falls (RaR) - how often people fall</text>
+
+        <text class="ev5aL" x="20" y="62">Tai chi · 0.81 (CI 0.67-0.99)</text>
+        <text class="ev5aS" x="20" y="79">2,655 people · 7 studies · 19% fewer</text>
+        <line x1="376" y1="70" x2="632" y2="70" stroke="#2E8B6F" stroke-width="2.5"/>
+        <line x1="376" y1="64" x2="376" y2="76" stroke="#2E8B6F" stroke-width="2.5"/>
+        <line x1="632" y1="64" x2="632" y2="76" stroke="#2E8B6F" stroke-width="2.5"/>
+        <rect x="482" y="64" width="12" height="12" rx="2" fill="#2E8B6F"/>
+        <rect x="700" y="59" width="160" height="22" rx="7" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="ev5aR" x="712" y="74">LOW certainty</text>
+
+        <text class="ev5aL" x="20" y="110">Balance exercise · 0.76 (CI 0.70-0.81)</text>
+        <text class="ev5aS" x="20" y="127">7,920 people · 39 studies · 24% fewer</text>
+        <line x1="400" y1="118" x2="488" y2="118" stroke="#4A524E" stroke-width="2.5"/>
+        <line x1="400" y1="112" x2="400" y2="124" stroke="#4A524E" stroke-width="2.5"/>
+        <line x1="488" y1="112" x2="488" y2="124" stroke="#4A524E" stroke-width="2.5"/>
+        <rect x="442" y="112" width="12" height="12" rx="2" fill="#4A524E"/>
+        <rect x="700" y="107" width="160" height="22" rx="7" fill="#2E3230"/>
+        <text class="ev5aC" x="712" y="122">HIGH certainty</text>
+
+        <rect x="20" y="165" width="4" height="14" rx="2" fill="#2E8B6F"/>
+        <text class="ev5aT" x="34" y="177">Number of people who fall (RR)</text>
+
+        <text class="ev5aL" x="20" y="210">Tai chi · 0.80 (CI 0.70-0.91)</text>
+        <text class="ev5aS" x="20" y="227">2,677 people · 8 studies · 20% fewer</text>
+        <line x1="400" y1="218" x2="568" y2="218" stroke="#2E8B6F" stroke-width="2.5"/>
+        <line x1="400" y1="212" x2="400" y2="224" stroke="#2E8B6F" stroke-width="2.5"/>
+        <line x1="568" y1="212" x2="568" y2="224" stroke="#2E8B6F" stroke-width="2.5"/>
+        <rect x="474" y="212" width="12" height="12" rx="2" fill="#2E8B6F"/>
+        <rect x="700" y="207" width="160" height="22" rx="7" fill="#2E3230"/>
+        <text class="ev5aC" x="712" y="222">HIGH certainty</text>
+
+        <text class="ev5aL" x="20" y="258">Balance exercise · 0.87 (CI 0.82-0.91)</text>
+        <text class="ev5aS" x="20" y="275">8,288 people · 37 studies · 13% fewer</text>
+        <line x1="496" y1="266" x2="568" y2="266" stroke="#4A524E" stroke-width="2.5"/>
+        <line x1="496" y1="260" x2="496" y2="272" stroke="#4A524E" stroke-width="2.5"/>
+        <line x1="568" y1="260" x2="568" y2="272" stroke="#4A524E" stroke-width="2.5"/>
+        <rect x="530" y="260" width="12" height="12" rx="2" fill="#4A524E"/>
+        <rect x="700" y="255" width="160" height="22" rx="7" fill="#2E3230"/>
+        <text class="ev5aC" x="712" y="270">HIGH certainty</text>
+
+        <line x1="320" y1="300" x2="680" y2="300" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="320" y1="300" x2="320" y2="306" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="400" y1="300" x2="400" y2="306" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="480" y1="300" x2="480" y2="306" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="560" y1="300" x2="560" y2="306" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="640" y1="300" x2="640" y2="306" stroke="#C9CFC9" stroke-width="2"/>
+        <text class="ev5aA" x="320" y="320" text-anchor="middle">0.60</text>
+        <text class="ev5aA" x="400" y="320" text-anchor="middle">0.70</text>
+        <text class="ev5aA" x="480" y="320" text-anchor="middle">0.80</text>
+        <text class="ev5aA" x="560" y="320" text-anchor="middle">0.90</text>
+        <text class="ev5aA" x="640" y="320" text-anchor="middle">1.00</text>
+        <text class="ev5aA" x="320" y="340">risk ratio - anything left of 1.00 means fewer falls than the control</text>
+
+        <rect x="20" y="350" width="14" height="14" rx="3" fill="#2E8B6F"/>
+        <text class="ev5aN" x="44" y="362">The boring comparator quietly wins on fall rate. Tai chi is one good option, not a unique one.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - Cochrane 2019, tai chi and general balance exercise on the same axis</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What the tai chi numbers say<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Rate of falls.</strong> RaR 0.81 (95% CI 0.67-0.99), 2,655 participants, 7 studies, <strong>low-certainty</strong> evidence. Read as a <strong>19% reduction</strong> in how often people fall. Note that the upper bound is 0.99 - the interval only just clears no effect.</li>
+          <li><strong>Number of people who fall.</strong> RR 0.80 (95% CI 0.70-0.91), 2,677 participants, 8 studies, <strong>high-certainty</strong> evidence. A <strong>20% reduction</strong> in the proportion of people who fall at all. This is the single strongest number in the tai chi literature: high certainty, tight interval, from the most rigorous review series in medicine.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The honest comparison, given equal weight<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The same review analysed <strong>general balance and functional exercise</strong> - the unglamorous category that includes sit-to-stand practice, stepping drills and standing exercises in a community hall. It did <em>slightly better</em> on fall rate:</p>
+        <ul>
+          <li><strong>Rate of falls:</strong> RaR 0.76 (95% CI 0.70-0.81), 7,920 participants, 39 studies, high certainty. A 24% reduction, from far more data, with a much tighter interval.</li>
+          <li><strong>Number of people who fall:</strong> RR 0.87 (95% CI 0.82-0.91), 8,288 participants, 37 studies, high certainty. Here tai chi's 0.80 is nominally better, though the intervals overlap heavily, so this is not a win worth banking.</li>
+        </ul>
+        <p>The defensible reading is not "tai chi does not work." It is <strong>tai chi is one good option among several, not a uniquely powerful one</strong>. If someone tells you tai chi is the best thing for falls, the Cochrane review does not support that, and the thing it loses to is ordinary balance exercise.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Why this still matters enormously.</strong> Adherence is the hidden variable. An intervention that works slightly better on paper but that you stop doing in six weeks loses to one that works slightly less well and that you enjoy. Cochrane cannot measure that for you; it is exactly the sort of thing that shows up in Session 6 when you are choosing between two classes on a Tuesday evening. Session 2's geometry explains <em>why</em> tai chi lands in this category at all - an hour a week of rehearsed weight transfer near the edge of the base of support is structurally a falls intervention whether or not a 17th-century boxer intended one.</p>
+        </div>
+      </div>
+    </details>
+
+    <div class="callout tip">
+      <strong>How to read "low certainty" without over-reacting</strong>
+      A GRADE rating is about confidence in the estimate, not about whether the effect is real. Low certainty means the true value could be meaningfully different from 0.81, usually because of risk-of-bias problems, small samples or inconsistent results. It does not mean the finding is fabricated. What it does mean: quote 0.81 with the words "low certainty" attached, do not round it to "tai chi cuts falls by a fifth," and expect the number to move as more trials arrive. Part 4 shows the caveat applies to most of this literature, not just this row.
+    </div>
+  </section>
+
+  <!-- ============ PART 2: GUIDELINES ============ -->
+  <section class="section" id="guidelines">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers institutional endorsement</span>
+      <h2>Who recommends it, and who does not <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Guidelines are a different kind of evidence from trials: they are what expert panels decided to tell clinicians after reading the trials. Tai chi does unusually well here for a traditional practice, and the honest picture includes the bodies that considered it and declined to name it.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Body and year</th><th>Verdict</th><th>What it actually says</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ACR / Arthritis Foundation, 2019 (Kolasinski et al)</td>
+          <td><strong>Yes, strongly</strong></td>
+          <td><strong>Strongly recommends tai chi for knee and hip osteoarthritis.</strong> This is the strongest clinical guideline endorsement tai chi has anywhere, and it is a mainstream rheumatology body, not a complementary-medicine one.</td>
+        </tr>
+        <tr>
+          <td>World Falls Guidelines, 2022 (Montero-Odasso et al, <em>Age and Ageing</em> 2022;51(9):afac205)</td>
+          <td><strong>Yes, by name</strong></td>
+          <td>Verbatim: "We recommend inclusion, when feasible, of Tai Chi and/or additional individualised progressive resistance strength training." Rated <strong>GRADE 1B</strong> - a strong recommendation on moderate-quality evidence. Note the "and/or": tai chi is offered as one of two named options, which matches the Cochrane picture exactly.</td>
+        </tr>
+        <tr>
+          <td>USPSTF, 2024 (<em>JAMA</em>, 2 July 2024)</td>
+          <td><strong>No, not by name</strong></td>
+          <td>Recommends exercise interventions (a <strong>B recommendation</strong>) for adults 65 and older at increased risk of falls, but <strong>did not identify any one exercise type as superior</strong> and does not single out tai chi. A body that looked at the same literature and declined to name it.</td>
+        </tr>
+        <tr>
+          <td>CDC (with ACL and NCOA)</td>
+          <td><strong>Indirect</strong></td>
+          <td>Recognition runs through a <em>named programme</em>, not through tai chi in general: <strong>Tai Ji Quan: Moving for Better Balance (TJQMBB)</strong>, developed by Fuzhong Li, is listed as a top-tier evidence-based falls programme. That is an endorsement of one curriculum with a fidelity standard, which is a narrower and more useful claim than it first looks.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <strong>Two claims this course explicitly does not make</strong>
+      <strong>UK NICE.</strong> Frequently asserted online, not verified for this course, so it is not claimed here. <strong>CDC STEADI.</strong> The STEADI initiative is real, but this course does not claim that a STEADI document names tai chi in its own recommendation text - the CDC link runs through the named TJQMBB programme instead. If you see either claim on a class website, treat it as unverified until you can find the sentence.
+    </div>
+
+    <p>Why "by name" is the distinction to watch: panels naming a specific modality is rare and costly, so when the World Falls Guidelines write "Tai Chi" into the recommendation text that is a real signal - and when the USPSTF looks at overlapping evidence and writes only "exercise interventions," that is also a real signal, pointing the other way. Hold both. <strong>A practice with one strong named recommendation, one named conditional recommendation and one deliberate non-naming is in genuinely good standing and is not established as best in class.</strong></p>
+  </section>
+
+  <!-- ============ PART 3: HEAD TO HEADS ============ -->
+  <section class="section" id="head-to-heads">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers where tai chi beat a real comparator</span>
+      <h2>The three head-to-heads <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Beating "no intervention" is easy and tells you almost nothing. The interesting trials are the ones where tai chi was compared against a proper dose of a real alternative and still came out ahead. In the whole literature there are three that clearly qualify. Here they are, precisely, with their limits.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>(a) Fibromyalgia - the best head-to-head in the field<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Research says.</strong> Wang C, Schmid CH, Fielding RA, et al, "Effect of tai chi versus aerobic exercise for fibromyalgia," <em>BMJ</em> 2018;360:k851. A 52-week single-blind comparative effectiveness randomised trial, <strong>n=226</strong>: 151 participants across four tai chi dose arms, 75 in supervised aerobic exercise. Primary outcome was the revised Fibromyalgia Impact Questionnaire (FIQR) at 24 weeks.</p>
+        <p><strong>Result:</strong> the combined tai chi groups improved more, a difference of <strong>5.5 points (95% CI 0.6-10.4, P=0.03)</strong>. The authors' own conclusion: "Tai chi mind-body treatment results in similar or greater improvement in symptoms than aerobic exercise, the current most commonly prescribed non-drug treatment." Read that carefully - "similar or greater" is the authors being careful, and the interval runs from 0.6 (barely anything) to 10.4 (substantial). A real result against a real comparator, and not a rout.</p>
+        <div class="callout tip">
+          <strong>The earlier trial, and why it is the weaker one</strong>
+          Wang C et al, <em>NEJM</em> 2010;363:743, n=66, reported a much larger FIQ between-group difference of <strong>-18.4, P&lt;0.001</strong>, maintained at 24 weeks. It is widely quoted because the number is big. But the comparator was <strong>wellness education plus stretching</strong> - a low-dose active control - and the trial was small. The 2018 trial is the stronger one precisely because it compared against a genuine exercise dose and the effect got smaller. That pattern, big effect against a weak control shrinking against a real one, is the shape of this entire literature.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>(b) Parkinson's disease - tai chi beats resistance training<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Research says.</strong> Li F, Harmer P, Fitzgerald K, et al, <em>NEJM</em> 2012;366(6):511-519. <strong>n=195</strong>, Hoehn and Yahr stages 1 to 4, <strong>three arms</strong> - tai chi, resistance training, and stretching - all 60 minutes twice weekly for 24 weeks. Outcomes were limits-of-stability measures.</p>
+        <ul>
+          <li><strong>Versus resistance training:</strong> maximum excursion <strong>+5.55 points (95% CI 1.12-9.97)</strong>; directional control <strong>+10.45 (95% CI 3.89-17.00)</strong>.</li>
+          <li><strong>Versus stretching:</strong> maximum excursion <strong>+11.98 (95% CI 7.21-16.74)</strong>; directional control <strong>+11.38 (95% CI 5.50-17.27)</strong>.</li>
+        </ul>
+        <p>The three-arm design is what makes this valuable. Stretching is the soft comparator, and tai chi's margin over it is roughly double its margin over resistance training - exactly as you would expect. But it <strong>also beat resistance training</strong>, a serious, dosed, well-regarded intervention. That is a genuine head-to-head win, and it is unusual in this literature.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>(c) Blood pressure - significant, and modest<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Research says.</strong> <em>JAMA Network Open</em>, February 2024. <strong>n=342</strong>, 12 months, tai chi versus aerobic exercise in people with prehypertension.</p>
+        <ul>
+          <li>Office systolic BP difference <strong>-2.40 mm Hg (95% CI -4.39 to -0.41, P=0.02)</strong>.</li>
+          <li>Nighttime ambulatory systolic BP <strong>-4.08 mm Hg (95% CI -6.59 to -1.57, P=0.002)</strong>.</li>
+          <li>Blood pressure normalised in <strong>21.8%</strong> of the tai chi group versus <strong>15.6%</strong> of the aerobic group.</li>
+        </ul>
+        <p><strong>The honest read.</strong> Statistically significant, clinically modest, a single trial, conducted in China. A 2.4 mm Hg office difference does not change a treatment plan on its own; the nighttime ambulatory figure is the more interesting one. Quote it as one promising trial, not an established finding - and note that a 2020 review of tai chi and blood pressure was favourable while explicitly flagging that the studies were of poor quality.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Three. That is the list.</strong> Fibromyalgia, Parkinson's balance, prehypertension. Three trials, all with modest margins, all against a real active comparator. If a class website claims tai chi outperforms other exercise for something else, the burden is on it to produce a comparable trial, and usually it cannot. You now know the entire set by name, which is a genuinely unusual thing for a beginner to walk into a studio with.</p>
+    </div>
+  </section>
+
+  <!-- ============ PART 4: THE HARD LIMITS ============ -->
+  <section class="section" id="limits">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · covers the state of the whole field</span>
+      <h2>The hard limits <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede"><strong>Research says.</strong> Yang G-Y, Hunter J, Bu F-L, et al, "Determining the safety and effectiveness of Tai Chi: a critical overview of 210 systematic reviews of controlled clinical trials," <em>Systematic Reviews</em> 2022;11:260. Two hundred and ten reviews screened, 47 synthesised, <strong>114 effect estimates from 37 reviews covering 59,306 adults</strong>. This is the paper that tells you what the whole field looks like from above, and it is uncomfortable reading in the best way.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GRADE certainty profile of 114 tai chi effect estimates, downgrade reasons, and AMSTAR-2 quality of the reviews">
+        <style>
+          .ev5bT { font: 700 13px Inter, sans-serif; fill: #26292A; }
+          .ev5bP { font: 700 12.5px Inter, sans-serif; fill: #26292A; }
+          .ev5bK { font: 600 12px Inter, sans-serif; fill: #26292A; }
+          .ev5bX { font: 400 11.5px Inter, sans-serif; fill: #6B7680; }
+          .ev5bR { font: 700 11.5px Inter, sans-serif; fill: #991B1B; }
+          .ev5bN { font: 600 14px Inter, sans-serif; fill: #0C3227; }
+        </style>
+        <text class="ev5bT" x="20" y="26">114 effect estimates · 37 reviews · 59,306 adults (Yang 2022)</text>
+
+        <text class="ev5bP" x="49" y="44" text-anchor="middle">7.0%</text>
+        <text class="ev5bP" x="238" y="44" text-anchor="middle">37.7%</text>
+        <text class="ev5bP" x="529" y="44" text-anchor="middle">31.6%</text>
+        <text class="ev5bP" x="761" y="44" text-anchor="middle">23.7%</text>
+
+        <rect x="20" y="52" width="59" height="52" fill="#2E8B6F"/>
+        <rect x="79" y="52" width="317" height="52" fill="#4A524E"/>
+        <rect x="396" y="52" width="265" height="52" fill="#B4BFB6"/>
+        <rect x="661" y="52" width="199" height="52" fill="#FEF2F2" stroke="#FCA5A5"/>
+
+        <text class="ev5bK" x="49" y="122" text-anchor="middle">High</text>
+        <text class="ev5bK" x="238" y="122" text-anchor="middle">Moderate</text>
+        <text class="ev5bK" x="529" y="122" text-anchor="middle">Low</text>
+        <text class="ev5bK" x="761" y="122" text-anchor="middle">Very low</text>
+
+        <line x1="79" y1="142" x2="860" y2="142" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="79" y1="136" x2="79" y2="142" stroke="#C9CFC9" stroke-width="2"/>
+        <line x1="860" y1="136" x2="860" y2="142" stroke="#C9CFC9" stroke-width="2"/>
+        <text class="ev5bK" x="470" y="162" text-anchor="middle">93% of the whole literature sits below high certainty</text>
+
+        <rect x="20" y="182" width="410" height="124" rx="12" fill="#EFF2EF" stroke="#C9CFC9"/>
+        <text class="ev5bP" x="40" y="208">Why estimates were downgraded</text>
+        <text class="ev5bX" x="40" y="240">Risk of bias</text>
+        <rect x="170" y="228" width="145" height="12" rx="3" fill="#4A524E"/>
+        <text class="ev5bX" x="325" y="240">80.7%</text>
+        <text class="ev5bX" x="40" y="266">Imprecision</text>
+        <rect x="170" y="254" width="68" height="12" rx="3" fill="#7C8781"/>
+        <text class="ev5bX" x="325" y="266">37.7%</text>
+        <text class="ev5bX" x="40" y="292">Inconsistency</text>
+        <rect x="170" y="280" width="58" height="12" rx="3" fill="#7C8781"/>
+        <text class="ev5bX" x="325" y="292">32.5%</text>
+
+        <rect x="450" y="182" width="410" height="124" rx="12" fill="#EFF2EF" stroke="#C9CFC9"/>
+        <text class="ev5bP" x="470" y="208">AMSTAR-2 quality of the 47 reviews</text>
+        <rect x="470" y="226" width="16" height="26" fill="#2E8B6F"/>
+        <rect x="486" y="226" width="55" height="26" fill="#4A524E"/>
+        <rect x="541" y="226" width="157" height="26" fill="#B4BFB6"/>
+        <rect x="698" y="226" width="142" height="26" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="ev5bX" x="470" y="274">High 2 · Moderate 7 · Low 20 · Critically low 18</text>
+        <text class="ev5bR" x="470" y="294">More than 80% low or critically low.</text>
+
+        <rect x="20" y="320" width="14" height="14" rx="3" fill="#2E8B6F"/>
+        <text class="ev5bN" x="44" y="332">This is the honest state of the whole field, not a knock against any single study.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the certainty profile of the entire tai chi literature</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The certainty numbers, unrounded<span class="mini">2.5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>GRADE certainty across the 114 effect estimates:</strong> high in <strong>8 estimates (7.0%)</strong>, moderate in <strong>43 (37.7%)</strong>, low in <strong>36 (31.6%)</strong>, very low in <strong>27 (23.7%)</strong>. So <strong>93% of effect estimates in the entire tai chi literature are below high certainty.</strong></p>
+        <p><strong>Why they were downgraded:</strong> risk of bias in <strong>92 estimates (80.7%)</strong>, imprecision in <strong>43 (37.7%)</strong>, inconsistency in <strong>37 (32.5%)</strong>. Risk of bias dominates, and it is the hardest one to fix - you cannot blind a participant to whether they are doing tai chi. <strong>And the reviews themselves:</strong> AMSTAR-2 rated the 47 synthesised reviews as high quality in 2, moderate in 7, low in 20, and critically low in 18. <strong>More than 80% are low or critically low quality.</strong> That is a statement about the review literature, not about the trials inside it, and it means secondhand summaries of tai chi research should be read with real suspicion.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The key question, stated squarely<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Is tai chi better than an equivalent amount of other exercise? Mostly no. It is comparable.</strong></p>
+        <p>Yang 2022 found a consistent gradient. Effects were <strong>greatest versus no intervention or health education</strong>, <strong>smaller versus medication</strong>, and <strong>smallest versus other exercise</strong>. Effect sizes shrink markedly once the comparator is a real dose of something else, which is why the three trials in Part 3 are notable rather than typical.</p>
+        <p>The COPD line in the review is the cleanest example of how the honest version sounds: tai chi may improve exercise capacity, lung function and quality of life compared with no treatment, but is <strong>"unlikely to be any more effective than other types of exercise (moderate to low certainty)."</strong> Both halves in one sentence.</p>
+        <div class="callout win">
+          <strong>The defensible summary, stated so you can repeat it</strong>
+          <strong>Tai chi is a genuinely effective form of exercise, with a few areas of demonstrated edge over comparable exercise. It is not established as categorically superior to exercise in general.</strong> That sentence survives contact with every study in this session. Almost every stronger claim you will read does not.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the evidence is thinner than the marketing<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Knee osteoarthritis:</strong> low-to-moderate strength evidence at review level, alongside that strong ACR recommendation - the guideline runs ahead of the certainty rating, which is normal and defensible. <strong>Cognition:</strong> promising 2023 findings, review-level certainty not established, so do not repeat "tai chi prevents dementia." <strong>Cancer:</strong> promising, no conclusions drawn. <strong>Stroke:</strong> gait improved short-term, balance did not; studies small and at high risk of bias. <strong>Fear of falling:</strong> commonly claimed, no verified effect size available for this course, so no number is given here.</p>
+        <p>One figure you may meet: the claim that around 94% of tai chi studies report positive results. This course does not use it, because the sourcing available was a search snippet rather than a paper - but if it were solid it would matter, because a literature where almost everything is positive is a literature with a publication problem.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 5: QI AND SAFETY ============ -->
+  <section class="section" id="qi-safety">
+    <div class="section-kicker">
+      <span class="klabel">Part 5 · covers mechanism and safety</span>
+      <h2>The qi question, and is it safe <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Every learner arrives with a version of this question: if tai chi works, does that mean qi is real? The question feels like it demands a yes or a no. It does not, and the useful move is to notice that two different descriptive registers are running at once.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What the research bodies do, and what the tradition does<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>On one side.</strong> Neither NCCIH's tai chi page nor its traditional Chinese medicine page uses <strong>气 qì</strong> or <strong>经络 jīngluò</strong> meridians as an explanatory mechanism. Where NCCIH describes mechanism at all, it uses biomedical language. The trials in this session measured fall counts, FIQR scores, limits-of-stability excursion and ambulatory blood pressure. None of them measured qi, and none of them needed to.</p>
+        <p><strong>On the other side.</strong> The practice's own framework is fully present in its primary sources and is not a modern embellishment. Yang Chengfu's sixth essential says plainly: <strong>"If you move the body about with stiff force, you swamp the meridians."</strong> UNESCO's official description cites theories of traditional Chinese medicine as a formative influence. This is the tradition describing itself, in the terms it has always used.</p>
+        <div class="prompt-box good"><span class="label">✦ 杨澄甫《太极拳十要》第六 · 用意不用力</span>用意不用力
+
+Yòng yì bù yòng lì
+
+"Use intent, not brute force." Yang Chengfu's own gloss is concrete and physiological rather than
+mystical - stiff force, he says, swamps the meridians and impedes qi and blood. Note the date:
+this is 1925, roughly 45 to 60 years later than the Wu and Li classics. A different textual layer,
+as Session 3 sets out.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Peter Wayne's eight active ingredients - the standard workaround<span class="mini">2.5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Researchers who want to study tai chi mechanistically need components they can vary and measure. Peter Wayne's Harvard framework of <strong>eight "active ingredients"</strong> is the usual answer: <strong>awareness, intention, structural integration, active relaxation, strengthening and flexibility, natural freer breathing, social support, and embodied spirituality.</strong> Wayne's own image is that tai chi is "more like a multidrug combination" than a single agent.</p>
+        <p>Notice what the list contains and what it does not. No qi, no meridians, and each component measurable in principle. <strong>Label it accurately: this is a framework, not a finding.</strong> It has not been validated by dismantling trials that remove one ingredient at a time, which is precisely the study nobody has run yet.</p>
+      </div>
+    </details>
+    <div class="callout win">
+      <strong>★ The honest line - the thesis of this session</strong>
+      <strong>The movements, the breathing, the attention and the social setting are testable, and they are being tested. Qi and meridians are the tradition's own descriptive vocabulary, and they are not what the trials measure. Neither fact undermines the other.</strong> The mistake most writing makes is translating one register into the other - either dressing qi up as "bioelectrical energy" to sound scientific, or dismissing a four-hundred-year-old practice because its self-description is not a mechanism. Keep the two registers visibly separate. You lose nothing and you stop being wrong in two directions at once.
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Safety - the genuinely reassuring part<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Yang 2022, verbatim:</strong> "No significant differences were found in the risk of serious, non-serious, or intervention-related adverse events from Tai Chi compared to both physically active and inactive interventions." That comparison against <em>inactive</em> controls is the important half - tai chi was not riskier than doing nothing.</li>
+          <li><strong>NCCIH:</strong> "Tai chi appears to be safe." Reported adverse effects "were minor, such as musculoskeletal aches and pain."</li>
+          <li><strong>VA:</strong> "generally thought to be safe," with possible minor knee pain, and beginners are advised to start in a classroom format "to ensure safety and good technique." That last clause is a direct argument for Session 6.</li>
+        </ul>
+        <p>This course deliberately does not reproduce the various "who should check with a doctor first" lists, because the two sources most often quoted for them could not be verified directly. The safe general position stands anyway and is in the standing rail: if you have a health condition, the question belongs to your doctor and to a teacher who has worked with people who have it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ APPLY ============ -->
+  <section class="section" id="apply-5">
+    <div class="section-kicker">
+      <span class="klabel">Reflect &amp; apply · 🧩 kit step 5</span>
+      <h2>The evidence-honest expectation <span class="tag demo">✦ 12 min · builds your kit</span></h2>
+    </div>
+    <p class="lede">In Session 1 you wrote "my one honest expectation" - the thing you actually hope changes in three months. This is the session that holds it against the numbers, kindly but squarely. The point is not to shrink your hope. It is to attach a certainty rating and a comparator to it, so that in twelve weeks you can tell whether it happened.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Reread your Session 1 expectation without editing it.</strong> Write it out again exactly as you first put it. People revise these silently and then congratulate themselves; copying it verbatim prevents that.</p></div>
+      <div class="step"><p><strong>Find the closest thing to it in this session.</strong> Falls, knee or hip osteoarthritis, fibromyalgia, Parkinson's balance, blood pressure, COPD, cognition, general fitness, stress. If your hope has a matching row above, note the study and the certainty. If it does not have one - and many perfectly good hopes do not - write "no direct evidence, and that is allowed."</p></div>
+      <div class="step"><p><strong>Attach the comparator.</strong> This is the step that makes the exercise honest. Not "does tai chi help with this" but "does tai chi help with this <em>more than another form of exercise I would actually do</em>." For most goals the answer from Part 4 is no, it is comparable.</p></div>
+      <div class="step"><p><strong>Decide, honestly, whether tai chi is the right choice for your goal.</strong> If your aim is fall prevention and you would genuinely enjoy a community balance class more, the Cochrane numbers say go and do that instead. <strong>That is a completely legitimate conclusion and this course will not argue you out of it.</strong> A course that could only ever end in "yes, do tai chi" would not have been worth writing.</p></div>
+      <div class="step"><p><strong>Write the revised expectation with its rating attached.</strong> One sentence, with a number in it, checkable in three months. Take it to the teacher conversation in Session 6.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">✦ Kit step 5 template</span>KIT STEP 5 · THE EVIDENCE-HONEST EXPECTATION · [date]
+
+MY SESSION 1 EXPECTATION, COPIED EXACTLY: ___
+
+CLOSEST EVIDENCE I FOUND TODAY: ___
+  study/guideline ___ · effect ___ · certainty [high / moderate / low / very low / none]
+
+THE COMPARATOR QUESTION: compared with [other exercise I would actually do], the evidence says
+tai chi is [better / comparable / unknown] for this. Source: ___
+
+IS TAI CHI STILL THE RIGHT CHOICE FOR ME? [yes / no / yes, for reasons the trials do not measure]
+because ___
+
+MY REVISED EXPECTATION: in three months I hope ___ , and I know that is supported at ___ certainty,
+compared with ___ .
+
+WHAT I WILL NOT CLAIM: that tai chi is categorically better than other exercise. 93% of effect
+estimates in the field sit below high certainty.</div>
+
+    <div class="callout tip">
+      <strong>If your reason is not on any evidence table</strong>
+      "I want an hour a week where nobody talks to me and I have to pay attention to my feet" is not a measured outcome in any trial in this session, and it is one of the best reasons to take up tai chi. Write it down as what it is - a reason the research does not cover - rather than reaching for a health claim to justify it. The honesty discipline runs in this direction too.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before Session 6 <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li><strong>Audit one class marketing page.</strong> Find a real tai chi school or studio website and read its health claims against this session's numbers. Does it quantify anything? Does it name a study? Does it claim tai chi is better than other exercise, and if so, on what? You are not looking for a villain - most pages are cheerfully vague rather than dishonest. You are calibrating what normal looks like before Session 6 asks you to choose one.</li>
+      <li><strong>Write your kit step 5 entry</strong> if you have not already, and <strong>if you have a health condition, write the exact question you will ask.</strong> One for a teacher: "what experience do you have with students who have this?" One for a doctor: "is there anything in this that I should avoid or adapt?" Both are short, and both are the sort of thing people mean to ask and then do not.</li>
+      <li>Optional deeper read: Yang G-Y et al, <em>Systematic Reviews</em> 2022;11:260, open access. It is the most useful single paper on this practice, and the abstract alone will change how you read every health claim you meet afterwards.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES / COVERAGE ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">What this covers</span>
+      <h2>Sources this session stands on</h2>
+    </div>
+    <p class="lede">Every figure above is quoted with its sample size, interval and certainty rating. Where a claim could not be verified, it is named as unverified rather than dropped quietly.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Sherrington et al, Cochrane 2019;1(1):CD012424</span><span class="note">Tai chi and general balance exercise on both outcomes, with certainty ratings</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Guideline status, including the non-endorsements</span><span class="note">ACR/AF 2019, World Falls 2022 GRADE 1B, USPSTF 2024, CDC via TJQMBB; NICE and STEADI declined</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The three head-to-head trials</span><span class="note">Wang BMJ 2018, Li NEJM 2012, JAMA Netw Open 2024 - each with limits stated</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Yang G-Y et al, Systematic Reviews 2022;11:260</span><span class="note">The 7.0% high-certainty figure, downgrade reasons, AMSTAR-2 profile, the comparator gradient</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The qi question and safety</span><span class="note">Two registers kept separate; Wayne's eight ingredients labeled a framework; adverse-event data quoted</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Mechanism research</span><span class="note">Named and unsettled - no dismantling trial has isolated Wayne's ingredients</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Individual medical advice</span><span class="note">Never covered, by design - see the standing rail. Your condition belongs to your doctor</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · In Cochrane 2019, tai chi compared with general balance and functional exercise...</p>
+      <button class="qopt" type="button">A · tai chi was clearly the more powerful intervention</button>
+      <button class="qopt" type="button">B · balance and functional exercise did slightly better on fall rate; both reduced falls</button>
+      <button class="qopt" type="button">C · neither showed any effect on falls</button>
+      <p class="qwhy">Tai chi RaR 0.81 (0.67-0.99, low certainty) against balance exercise RaR 0.76 (0.70-0.81, high certainty). Both work. Tai chi is one good option among several, not a uniquely powerful one.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Of the 114 effect estimates surveyed by Yang 2022, the share rated high certainty is...</p>
+      <button class="qopt" type="button">A · about 60%</button>
+      <button class="qopt" type="button">B · about 38%</button>
+      <button class="qopt" type="button">C · 7.0% - eight estimates out of 114</button>
+      <p class="qwhy">Moderate 37.7%, low 31.6%, very low 23.7%. So 93% of the field sits below high certainty, mostly because of risk of bias (80.7% of downgrades). That is the honest state of the whole literature.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which body strongly recommends tai chi for knee and hip osteoarthritis?</p>
+      <button class="qopt" type="button">A · the ACR / Arthritis Foundation 2019 guideline</button>
+      <button class="qopt" type="button">B · the USPSTF, in its 2024 falls statement</button>
+      <button class="qopt" type="button">C · UK NICE</button>
+      <p class="qwhy">Kolasinski et al, 2019 - the strongest clinical guideline endorsement tai chi has. The USPSTF 2024 recommends exercise but names no superior type. NICE is unverified and this course does not claim it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Falls, tai chi</b><span>Cochrane 2019: rate RaR 0.81 (0.67-0.99) low certainty; fallers RR 0.80 (0.70-0.91) high certainty.</span></div>
+      <div class="cheat-item"><b>The comparator</b><span>Balance/functional exercise: rate RaR 0.76 (0.70-0.81) high certainty. It wins on rate.</span></div>
+      <div class="cheat-item"><b>Named in a guideline</b><span>World Falls 2022, GRADE 1B, "Tai Chi and/or ... resistance strength training." ACR 2019 strongly recommends for knee and hip OA.</span></div>
+      <div class="cheat-item"><b>Not named</b><span>USPSTF 2024 recommends exercise (B) but no superior type. NICE unverified. CDC only via TJQMBB.</span></div>
+      <div class="cheat-item"><b>The three head-to-heads</b><span>Fibromyalgia BMJ 2018 (+5.5 FIQR) · Parkinson's NEJM 2012 (beat resistance training) · BP JAMA Netw Open 2024 (-2.40 mm Hg).</span></div>
+      <div class="cheat-item"><b>7.0%</b><span>Only 8 of 114 effect estimates are high certainty. 80.7% downgraded for risk of bias. 80%+ of reviews low or critically low.</span></div>
+      <div class="cheat-item"><b>The defensible line</b><span>A genuinely effective exercise with a few demonstrated edges - not categorically superior to exercise in general.</span></div>
+      <div class="cheat-item"><b>🧩 Kit step 5</b><span>Revise your Session 1 expectation: what evidence, what certainty, compared with what - and is tai chi still the right choice?</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 5 of 6 · learn-taichi-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="04-thirteen-postures.html">← Prev: The thirteen postures</a> &nbsp;·&nbsp; <a href="06-finding-a-teacher.html">Next: Finding a teacher →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
