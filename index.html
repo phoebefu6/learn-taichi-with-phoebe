@@ -81,10 +81,31 @@
 .vposter{width:1536px;transform-origin:top left}
 .vposter img{display:block;width:100%;height:auto}
 
+.vposter{width:1536px;transform-origin:top left}
+.vposter img{display:block;width:100%;height:auto}
+
+.vposter{width:1536px;transform-origin:top left}
+.vposter img{display:block;width:100%;height:auto}
+
+.vposter{width:1536px;transform-origin:top left}
+.vposter img{display:block;width:100%;height:auto}
+
   /* The poster lives at the foot of this page, below the knowledge map, rather than on a
      page of its own. It holds its authored width and either scales to fit or scrolls,
      because a reference sheet that reflows stops being a reference sheet. */
   .poster-section { margin-top: 2.2rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); }
+  /* The sheet is authored wider than the course's reading column, so inside that column it
+     would fit at 0.67 and render 11.5px type at 7.7px. Break the section out to full width
+     and it fits near 1:1 on a desktop instead. */
+  /* Break out of the reading column, but only where it buys something. Below 1100px the
+     sheet is already at actual size and scrolling inside its frame, so the negative margins
+     would add a page-level scrollbar for no gain. 100vw also counts the scrollbar, so --sbw
+     is measured in script and taken back off. */
+  @media (min-width: 1100px) {
+    .poster-section { margin-left: calc(50% - 50vw + (var(--sbw, 0px) / 2));
+                      margin-right: calc(50% - 50vw + (var(--sbw, 0px) / 2));
+                      padding-left: clamp(1rem, 4vw, 4rem); padding-right: clamp(1rem, 4vw, 4rem); }
+  }
   .poster-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
   .poster-section .ps-lede { color: var(--muted); font-size: .92rem; margin-bottom: .7rem; }
   .poster-bar { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: .7rem; }
@@ -222,6 +243,12 @@
 
 
 
+
+
+
+
+
+
   <section class="section poster-section" id="poster">
     <h2>The six-session walk, on one sheet 📐</h2>
     <p class="ps-lede">One illustrated courtyard, six numbered stations, walked in order. The mythology is left out on purpose.</p>
@@ -286,20 +313,27 @@ window.MINDMAP_DATA = {
 <script src="assets/app.js?v=6"></script>
 
 
+
+
+
 <script>
 (function () {
   var vp = document.getElementById('vp');
   if (!vp) return;
-  var W = 1536, MIN_FIT = 0.6;
+  var W = 1536, MIN_FIT = 0.8;
   var frame = document.getElementById('frame'), stage = document.getElementById('stage'),
       btn = document.getElementById('zoomToggle');
   var userChose = false, actual = false;
+  function sbw() {
+    var w = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--sbw', (w > 0 ? w : 0) + 'px');
+  }
   function full() { vp.style.transform = 'none'; stage.style.height = ''; stage.style.width = W + 'px'; }
   function apply() {
     var avail = frame.clientWidth;
     if (!avail || avail < 40) { full(); return; }   // a hidden frame must never scale to nothing
     var s = avail / W;
-    if (!userChose) actual = s < MIN_FIT;           // below 0.6 the labels stop being readable
+    if (!userChose) actual = s < MIN_FIT;           // below 0.8 the labels stop being readable
     if (actual || s >= 1) full();
     else {
       vp.style.transform = 'scale(' + s + ')';
@@ -312,9 +346,9 @@ window.MINDMAP_DATA = {
   btn.addEventListener('click', function () {
     userChose = true; actual = !actual; apply(); if (actual) frame.scrollLeft = 0;
   });
-  window.addEventListener('resize', apply);
+  window.addEventListener('resize', function () { sbw(); apply(); });
   if (typeof ResizeObserver === 'function') new ResizeObserver(apply).observe(frame);
-  apply();
+  sbw(); apply();
 })();
 </script>
 </body>
