@@ -87,9 +87,15 @@ body {
 }
 .agenda span { padding: .45rem .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .agenda .a1 { background: var(--indigo-deep); }
-.agenda .a2 { background: var(--indigo-mid); }
-.agenda .a3 { background: var(--amber); color: var(--amber-ink); }
-.agenda .a4 { background: var(--indigo-soft); }
+/* Agenda band contrast, fixed 2026-09-02. Three bands failed WCAG 4.5:1 on small text:
+     a4 had no `color` rule at all, so it inherited the block's `color:#fff` and put white
+     on a pale tint (1.9-2.1:1). The 87-repo donor carries `color: var(--ink)`; restored.
+     a2 and a3 failed on their token pairs, so each carries a literal here rather than a
+     changed token, because --indigo-mid and --amber-ink are used elsewhere in this sheet.
+     Recompute these three literals if the palette changes. */
+.agenda .a2 { background: #6D7772; }
+.agenda .a3 { background: var(--amber); color: #051410; }
+.agenda .a4 { background: var(--indigo-soft); color: var(--ink); }
 
 /* ---------- toolbar ---------- */
 .toolbar {
