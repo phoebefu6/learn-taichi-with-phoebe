@@ -320,7 +320,7 @@ window.MINDMAP_DATA = {
 (function () {
   var vp = document.getElementById('vp');
   if (!vp) return;
-  var W = 1536, MIN_FIT = 0.8;
+  var W = 1536, MIN_FIT = 0;   /* a raster poster stays legible at any scale; fit to width always */
   var frame = document.getElementById('frame'), stage = document.getElementById('stage'),
       btn = document.getElementById('zoomToggle');
   var userChose = false, actual = false;
@@ -337,7 +337,7 @@ window.MINDMAP_DATA = {
     if (actual || s >= 1) full();
     else {
       vp.style.transform = 'scale(' + s + ')';
-      stage.style.width = W + 'px';
+      stage.style.width = Math.ceil(W * s) + 'px';       /* the stage is the SCALED box, or it overflows the frame */
       stage.style.height = Math.ceil(vp.offsetHeight * s) + 'px';
     }
     btn.setAttribute('aria-pressed', actual ? 'true' : 'false');
