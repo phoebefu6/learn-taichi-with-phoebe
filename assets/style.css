@@ -12,6 +12,7 @@
   --faint: #C9CFC9;
   --hairline: #E6EAE5;
   --amber: #2E8B6F;
+  --amber-solid: #2B8369;
   --amber-ink: #0C3227;
   --amber-50: #E7F3EE;
   --paper: #FFFFFF;
@@ -229,7 +230,7 @@ details.card .body h4:first-child { margin-top: 0; }
 .pill.solid { background: var(--indigo); color: #fff; }
 .pill.light { background: var(--indigo-50); color: var(--indigo); }
 .pill.inkpill { background: var(--ink); color: #fff; }
-.pill.amber, .pill.peach { background: var(--amber); color: var(--amber-ink); }
+.pill.amber, .pill.peach { background: var(--amber-solid); color: #fff; }
 .pill.bare { color: var(--faint); }
 
 /* ---------- 4D grid ---------- */
@@ -287,7 +288,7 @@ table.clean td:first-child { font-weight: 600; }
   padding: .15rem .7rem;
 }
 .prompt-box.bad .label { background: var(--faint); color: var(--ink); }
-.prompt-box.good .label { background: var(--amber); color: var(--amber-ink); }
+.prompt-box.good .label { background: var(--amber-solid); color: #fff; }
 .copy-btn {
   position: absolute;
   top: .7rem;
@@ -304,7 +305,7 @@ table.clean td:first-child { font-weight: 600; }
   transition: background .15s ease;
 }
 .copy-btn:hover { background: rgba(255,255,255,.22); }
-.copy-btn.copied { background: var(--amber); border-color: var(--amber); color: var(--amber-ink); }
+.copy-btn.copied { background: var(--amber-solid); border-color: var(--amber-solid); color: #fff; }
 
 /* ---------- demo steps ---------- */
 .steps { counter-reset: step; margin: .6rem 0 1rem; }
@@ -355,8 +356,8 @@ table.clean td:first-child { font-weight: 600; }
 }
 .callout.example .ex-pill {
   display: inline-block;
-  background: var(--amber);
-  color: var(--amber-ink);
+  background: var(--amber-solid);
+  color: #fff;
   border-radius: 999px;
   padding: .15rem .7rem;
   font-size: .68rem;
@@ -732,7 +733,7 @@ details.card:hover::after { opacity: 1; }
 .tc-pill:hover { border-color: var(--indigo-mid); color: var(--indigo); }
 .tc-pill.on { background: var(--indigo); border-color: var(--indigo); color: #fff; }
 .tc-pill.tc-sink { margin-left: auto; }
-.tc-pill.tc-sink.on { background: var(--amber); border-color: var(--amber); color: #fff; }
+.tc-pill.tc-sink.on { background: var(--amber-solid); border-color: var(--amber-solid); color: #fff; }
 .tc-note { margin-top: 10px; font-size: 0.88rem; color: var(--muted); }
 .tc-body { display: flex; gap: 22px; margin-top: 12px; flex-wrap: wrap; align-items: flex-start; }
 .tc-stage { flex: 1 1 300px; min-width: 260px; }
