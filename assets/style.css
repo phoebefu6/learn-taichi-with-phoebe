@@ -2,6 +2,7 @@
    Accent: indigo #4A524E · Ink: #26292A · Flagship: amber #2E8B6F */
 
 :root {
+  --muted-text: #6F7577;
   --indigo: #4A524E;
   --indigo-deep: #2E3230;
   --indigo-mid: #7C8781;
@@ -176,7 +177,7 @@ main { padding: 2.5rem 0 4rem; }
   flex: none;
 }
 .mode.live { background: var(--indigo); color: #fff; }
-.mode.self { background: #fff; color: var(--muted); border: 1px solid var(--hairline); }
+.mode.self { background: #fff; color: var(--muted-text); border: 1px solid var(--hairline); }
 
 /* ---------- accordions ---------- */
 details.card {
@@ -686,7 +687,7 @@ details.card:hover::after { opacity: 1; }
 .med-controls { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; }
 .med-group { display: flex; flex-wrap: wrap; gap: 8px; }
 .med-pill {
-  border: 1.5px solid var(--hairline); background: var(--paper); color: var(--muted);
+  border: 1.5px solid var(--hairline); background: var(--paper); color: var(--muted-text);
   border-radius: 999px; padding: 7px 14px; font: 600 0.82rem Inter, sans-serif; cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -726,7 +727,7 @@ details.card:hover::after { opacity: 1; }
 .tc-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
 .tc-group { display: flex; flex-wrap: wrap; gap: 8px; }
 .tc-pill {
-  border: 1.5px solid var(--hairline); background: var(--paper); color: var(--muted);
+  border: 1.5px solid var(--hairline); background: var(--paper); color: var(--muted-text);
   border-radius: 999px; padding: 7px 14px; font: 600 0.82rem Inter, sans-serif; cursor: pointer;
   transition: all 0.15s ease;
 }
