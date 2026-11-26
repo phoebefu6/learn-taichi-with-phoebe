@@ -598,7 +598,7 @@ details.card summary:hover { background: #F4F6F3; }
 .quiz-q .qopt.correct { background: var(--indigo); border-color: var(--indigo); color: #fff; font-weight: 600; }
 .quiz-q .qopt.correct::after { content: "  ✓"; }
 .quiz-q .qopt.wrong { background: #FEF2F2; border-color: #FCA5A5; color: #991B1B; animation: qshake .3s ease; }
-.quiz-q .qopt.wrong::after { content: "  ✗ try again"; font-size: .78rem; }
+.quiz-q .qopt.wrong::after { content: "  not this one, try again"; font-size: .78rem; }
 .quiz-q .qopt:disabled { cursor: default; }
 .quiz-q .qwhy {
   display: none;
